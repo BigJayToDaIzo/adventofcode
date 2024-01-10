@@ -10,6 +10,9 @@ Key_sequence_discovered = false
 while Key_sequence_discovered == false do
 	--Try current iteration of key combination
 	local attempt = Key_prefix .. Missing_key_chunk
+	-- Leaving print statements on for the 6 digit day 2 problem will cause the exercise to take
+	-- quite a bit longer to run, but was still only about 15 seconds and barely touched
+	-- CPU/GPU/MEM
 	print("trying + " .. attempt .. " sequence...")
 	local hash_back = md5.sumhexa(attempt)
 	print("checking " .. hash_back .. "....")
